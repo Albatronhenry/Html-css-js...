@@ -9,7 +9,7 @@
 
 ```
 if(top.location != self.location){
-		top.location = self.location;//防止页面被框架包含
+		top.location = self.location;  //防止页面被框架包含
 }
 ```
 
@@ -18,7 +18,7 @@ if(top.location != self.location){
  
 ```
 if( self.location != top.location){
-	    top.location =self.location;//防止页面被框架包含
+	    top.location =self.location;      //防止页面被框架包含
    }
 ```
 
@@ -26,7 +26,7 @@ if( self.location != top.location){
 
  ```
  if( self.location != top.location){
-	    self.location =top.location;//防止页面被框架包含
+	    self.location =top.location;     //防止页面被框架包含
    }
 </script>
 ```
