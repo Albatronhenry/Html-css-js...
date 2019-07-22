@@ -1,3 +1,4 @@
+[参考](https://blog.csdn.net/u010345462/article/details/81699910)
 ```js
 安装
 npm install qrcodejs2 --save
