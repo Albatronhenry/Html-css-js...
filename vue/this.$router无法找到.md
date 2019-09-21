@@ -8,7 +8,7 @@ if (code == "1") {//签到成功 router到成功界面
 结果怎么都无法路由，控制台报找不到该方法，后查询原因是axios需要绑定this,即添加 `.bind(this)`
 ```js
   this.$axios
-        .post("http://10.168.2.145:9999/user/sign", {
+        .post("http://10.*.*.*:9999/user/sign", {
             phone: values.phone
         })
         .then(function(response) {
