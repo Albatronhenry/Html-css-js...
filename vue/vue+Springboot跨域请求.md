@@ -1,5 +1,28 @@
 [vue+Springboot跨域请求](https://www.cnblogs.com/zircon/p/9091225.html)
 
+方法一：
+-----------
+vue端配置如下即可：
+```js
+ devServer: {
+    // development server port 8000
+    port: 8000,
+    // If you want to turn on the proxy, please remove the mockjs / src / main.jsL11
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:8081/jcy', //主要是这里对应后端服务地址信息
+        ws: false,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
+  }
+````
+
+方法二：
+-----------
 vue端需要实现如下：
 ```js
 main.js中添加如下片段：
