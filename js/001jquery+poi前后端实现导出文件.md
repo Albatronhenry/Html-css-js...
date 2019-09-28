@@ -60,8 +60,10 @@
 			String logtime = sdflog.format(new Date());
 			logtime = "****虚拟账号使用情况表"+logtime;			
 			XSSFSheet sheet = wb.createSheet(logtime);			
-			//	标题		
-			sheet.addMergedRegion(new CellRangeAddress(0, 0, 0, 5));
+			//	标题	
+			//合并单元格 //参数说明：1：开始行 2：结束行  3：开始列 4：结束列
+			//这里需要从第1行到第一行，第一列到第六列
+			sheet.addMergedRegion(new CellRangeAddress(0, 0, 0, 5)); 
 			XSSFRow header_row = sheet.createRow(0);
 			header_row.createCell(0).setCellValue(logtime);
 			// 表头列
